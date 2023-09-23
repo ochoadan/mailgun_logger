@@ -1,0 +1,325 @@
+:root {
+  --c-blue-bright: #2649e4;
+  --c-blue-dark: #202631;
+  --c-blue-pale: #f1f6fa;
+  --c-blue-light: #cdcfee;
+  --c-gray-light: #f3f3f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+body {
+  height: 100vh;
+  background: var(--c-gray-light);
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#app-header {
+  padding: 0;
+  margin: 0;
+}
+
+#app-header .top {
+  background-color: var(--c-blue-bright);
+}
+
+#main-nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#main-nav #app-logo a {
+  margin: 0;
+  padding: 0;
+}
+
+#main-nav ul {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#main-nav li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+#main-nav a {
+  padding: 14px 8px;
+  color: var(--c-blue-light);
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+#main-nav a:hover {
+  color: white;
+}
+
+#main-nav a.is-active {
+  background-color: var(--c-blue-dark);
+  color: white;
+}
+
+.subnav {
+  background-color: var(--c-blue-dark);
+}
+
+.subnav ul {
+  margin: 0 auto;
+  max-width: 1400px;
+  list-style: none;
+  color: var(--c-blue-light);
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.subnav a {
+  padding: 10px 8px;
+  color: var(--c-blue-light);
+  display: inline-block;
+  text-decoration: underline;
+  position: relative;
+}
+
+.subnav a:hover {
+  color: white;
+}
+
+.subnav a.is-active {
+  background-color: var(--c-blue-dark);
+  color: white;
+}
+
+.modal-open {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  outline: none;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.modal.show {
+  display: block;
+  transform: translate(0, 0);
+}
+
+/* // Shell div to position the modal with bottom padding */
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 60vw;
+  margin-top: 50px;
+  background: #fff;
+  padding: 50px;
+}
+
+.modal-dialog .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+pre,
+code {
+  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  page-break-inside: avoid;
+  font-family: monospace;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  overflow: auto;
+  display: block;
+  word-wrap: break-word;
+}
+
+tr {
+  position: relative;
+}
+
+.pagination {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: center;
+}
+
+.pagination li {
+  display: inline;
+}
+
+.pagination li a {
+  display: inline-block;
+  padding: 8px 12px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 20px;
+}
+dl {
+  display: flex;
+  background: #fff;
+  flex-flow: row wrap;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+dt {
+  flex-basis: 20%;
+  padding: 5px 10px;
+  text-align: right;
+}
+dd {
+  flex-basis: 70%;
+  flex-grow: 1;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: lightgrey;
+  font-size: 0;
+}
+
+.dot.active {
+  background-color: mediumspringgreen;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label + input {
+  margin-top: 5px;
+}
+
+.btn-danger {
+  background: crimson;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.btn-danger:hover {
+  background: red;
+}
+
+.validation-error {
+  color: red;
+}
+
+footer {
+  font-size: 12px;
+  max-width: 1400px;
+  margin: 20px auto;
+}
+
+.warn {
+  padding: 10px;
+  background: orange;
+}
+
+.info {
+  padding: 10px;
+  background: palegreen;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 4px 5px;
+}
+
+.table {
+  padding: 20px;
+  background: white;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border-bottom: 1px solid #ccc;
+  padding: 8px 3px;
+}
+
+thead th {
+  background: var(--c-blue-dark);
+  color: #fff;
+  text-align: left;
+}
+
+tbody tr:hover td {
+  background-color: #efefef;
+}
+
+.btn {
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--c-blue-bright);
+  border-color: var(--c-blue-bright);
+  color: white;
+  padding: 6px 8px;
+}
+
+.td-truncate {
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#events-filter > div {
+  display: inline-block;
+}
+
+#events-filter label {
+  display: none;
+}

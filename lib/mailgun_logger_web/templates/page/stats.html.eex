@@ -1,0 +1,32 @@
+<h1>Main dashboard</h1>
+
+<div>
+  <%= if @total_accounts == 0 do %>
+  <div class="warn">
+    <strong>Note:</strong>
+    no accounts found...
+    <%= link "create an account", to: Routes.account_path(@conn, :new) %> to start receiving logs.
+  </div>
+  <% end %>
+  <%= if Phoenix.Flash.get(@flash, :info) do %>
+    <div class="info" role="info">
+      <%= Phoenix.Flash.get(@flash, :info) %>
+    </div>
+  <% end %>
+  <h2>Some stats</h2>
+  <h3>Event counts by type (all time)</h3>
+  <dl>
+    <dt>Failed:</dt>
+    <dd><%= @event_counts.by_type["failed"] %></dd>
+    <dt>Accepted:</dt>
+    <dd><%= @event_counts.by_type["accepted"] %></dd>
+    <dt>Delivered:</dt>
+    <dd><%= @event_counts.by_type["delivered"] %></dd>
+    <dt>Clicked:</dt>
+    <dd><%= @event_counts.by_type["clicked"] %></dd>
+    <dt>Opened:</dt>
+    <dd><%= @event_counts.by_type["opened"] %></dd>
+    <dt>Stored:</dt>
+    <dd><%= @event_counts.by_type["stored"] %></dd>
+  </dl>
+</div>
