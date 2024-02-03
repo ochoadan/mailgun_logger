@@ -1,3 +1,25 @@
+## 23012.5.0 (2023-12-27)
+
+- Bump packages
+- Fix unhandled nil value in message content type check (#33)
+- Enlarge `message_id` field (#32)
+
+## 23012.4.0 (2023-12-20)
+
+- Trim values for filters in search form
+
+## 23012.3.0 (2023-12-12)
+
+- Handle plain text raw messages
+
+## 23012.2.0 (2023-12-07)
+
+- Changed the trigger button from LV to POST (@m1dnight)
+
+## 23012.1.0 (2023-12-06)
+
+- Added index to inserted_at on events to speed things up (@m1dnight)
+
 ## 2309.1.0 (2023-09-26)
 
 - Update some dependencies
